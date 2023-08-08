@@ -1,1 +1,1 @@
-# eventcamp
+# Registration system using PHP

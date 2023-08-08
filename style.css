@@ -1,0 +1,104 @@
+body {
+	background: #f2efee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form {
+	width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background: #fff;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+label {
+	color: #888;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button {
+	background: #F37126;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	font-size: 16px;
+   width: 30%;
+   min-width: 140px;
+   box-shadow: 2px 5px 2px 1px #d3d3d3; 
+   line-height: 31px;
+   margin-bottom: 20px;
+}
+button:hover{
+	opacity: .7;
+}
+
+#login-button-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.create-account {
+   text-align: center;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+.success {
+   background: #D4EDDA;
+   color: #40754C;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+.ca {
+	font-size: 16px;
+	display: inline-block;
+	padding: 10px;
+	color: #444;
+}
+.ca:hover {
+	text-decoration: underline;
+} 
