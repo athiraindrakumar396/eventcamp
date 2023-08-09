@@ -2,6 +2,7 @@
 session_start();
 include "config.php";
 
+//get current user details
 if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
      $posts = [];
      $noPosts = false;
@@ -11,6 +12,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
      if (mysqli_num_rows($result) > 0) {
           $key = 0;
           while($row = mysqli_fetch_assoc($result)) {
+              $posts[$key]['id'] = $row['id'];
               $posts[$key]['title'] = $row['title'];
               $posts[$key]['content'] = $row['content'];
               $posts[$key]['logo'] = $row['logo'];
@@ -32,12 +34,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
        <a class="welcome-text">Hello, <?php echo $_SESSION['name']; ?></a>
        <a class="logout-class" href="logout.php">Logout</a>
      </div>
-     <?php if (isset($_GET['error'])): ?>
-          <p class="error"><?php echo $_GET['error']; ?></p>
-     <?php endif; ?>
-     <?php if (isset($_GET['success'])): ?>
-          <p class="success"><?php echo $_GET['success']; ?></p>
-     <?php endif; ?>
      <div id="parent">
           <div class="posts-card">
                <p align="center">
@@ -58,6 +54,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
                                </div>
                                <h3><?php echo $post['title'];?></h3>
                                <p><?php echo $post['content'];?></p>
+                               <a id="post-edit" href="editPost.php?post_id=<?php echo $post['id'];?>">Edit</a>
+                               <a id="post-delete" href="deletePost.php?post_id=<?php echo $post['id'];?>">Delete</a>
                              </div>
                            </div>
                          </div>

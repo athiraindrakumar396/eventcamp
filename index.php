@@ -10,8 +10,8 @@
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<input type="text" name="email" placeholder="Email"><br>
-     	<input type="password" name="password" placeholder="Password"><br>
+     	<input type="text" name="email" placeholder="Email" required><br>
+     	<input type="password" name="password" placeholder="Password" required><br>
      	<div id="login-button-container" class="col-md-12 margin-bottom">
         	<button type="submit" class="btn btn-default btn-red login">Login</button>
         </div>
@@ -20,7 +20,6 @@
 	        <a href="signup.php" class="ca">Create Account</a>
 	    </div>
       </div>
-
      </form>
 </body>
 </html>

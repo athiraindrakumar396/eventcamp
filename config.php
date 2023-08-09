@@ -1,9 +1,9 @@
 <?php
 
+//db connection details
 $host= "localhost";
 $user= "root";
 $password = "root";
-
 $dbName = "eventcamp";
 
 $conn = mysqli_connect($host, $user, $password, $dbName);
@@ -12,6 +12,7 @@ if (!$conn) {
 	echo "Connection failed!";
 }
 
+//creating users table
 $query = "CREATE TABLE IF NOT EXISTS users (
 	id int(11) NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
@@ -23,6 +24,7 @@ $query = "CREATE TABLE IF NOT EXISTS users (
 )";
 $conn->query($query);
 
+//creating posts table
 $postQuery = "CREATE TABLE IF NOT EXISTS posts (
 	id int(11) NOT NULL AUTO_INCREMENT,
 	user_id int(11) NOT NULL ,

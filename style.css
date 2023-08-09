@@ -125,14 +125,14 @@ h1 {
 
 .topnav {
   overflow: hidden;
-  background-color: #F37126;
+  background-color: #424242;
 }
 
 .topnav a {
-  color: #424242;
+  color: #fff;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -220,4 +220,24 @@ button:hover{
 
     width: auto;
     max-width: 100%;
+}
+
+#post-edit {
+	float: left;
+	text-decoration: none;
+	color: #F37126;
+}
+
+#post-edit:hover{
+	text-decoration: underline;
+}
+
+#post-delete {
+	float: right;
+	text-decoration: none;
+	color: #F37126;
+}
+
+#post-delete:hover{
+	text-decoration: underline;
 }
